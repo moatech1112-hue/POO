@@ -1,0 +1,75 @@
+package Aulas_Unidade1;
+
+public class Exercicio_3 {
+
+	public static void main(String[] args) {
+		Livraria livre = new Livraria(0, 0, 0, null, null, null, 0, 0);
+		livre.vendaLivro(0);
+
+	}
+
+}
+
+class CriaLivro {
+	int paginas, ano, isdn;
+	String editora, titulo, autor;
+
+	public CriaLivro(int npaginas, int anoLivro, int codigo, String editoraLivro, String tituloLivro,
+			String autorLivro) {
+		paginas = npaginas;
+		ano = anoLivro;
+		isdn = codigo;
+		editora = editoraLivro;
+		titulo = tituloLivro;
+		autor = autorLivro;
+
+	}
+}
+
+class Livraria {
+	int paginas, ano, isdn, quantidade;
+	String editora, titulo, autor;
+	double valor;
+	
+	public Livraria ( int npaginas, int anoLivro, int codigo, String editoraLivro, String tituloLivro,
+			String autorLivro, double valorCorrente, int qtd) {
+		
+		paginas = npaginas;
+		ano = anoLivro;
+		isdn = codigo;
+		editora = editoraLivro;
+		titulo = tituloLivro;
+		autor = autorLivro;
+		valor = valorCorrente;
+		quantidade = qtd;
+	
+		
+		
+	}
+		
+	public void compraLivro (int qtd) {
+		quantidade = quantidade + qtd;
+	}
+	
+	public double vendaLivro (int qtd) {
+		if ( quantidade > 0) {
+			quantidade = qtd - 1;
+			return (qtd * valor);
+			
+		}else {
+			System.out.print("estoque insuficiente");
+			return valor;    //precisa retornar algo em tudo, seja no if ou no else, entãoc
+			
+		}
+		    
+	}
+}
+    
+		
+		
+
+
+
+	
+
+
