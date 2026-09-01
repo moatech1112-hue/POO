@@ -1,0 +1,25 @@
+package Aulas_Unidade1;
+
+import java.util.Scanner;
+
+import Aulas_Unidade1.Back_l2_q2.Retangulo;
+
+public class Front_l2_q2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		Retangulo retangular = new Retangulo ();
+		
+		System.out.println("informe a largura do retângulo: ");
+		retangular.setLargura(sc.nextDouble());
+		
+		System.out.println("informe a altura do retângulo");
+		retangular.setAltura(sc.nextDouble());
+		
+		System.out.println("Area = " + retangular.areaRetangulo());
+		System.out.println("Perímetro = "+ retangular.perimetroRetangulo());
+		System.out.println("Diagonal = " + retangular.diagonalRetangulo());
+
+	}
+
+}
