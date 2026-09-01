@@ -1,0 +1,39 @@
+package Aulas_Unidade1;
+
+public class Back_l2_q2 {
+	
+	
+	public static class Retangulo {
+		private Double largura, altura;
+
+		public Double getLargura() {
+			return largura;
+
+		}
+		
+		public void setLargura(Double largura) {
+			this.largura = largura;
+		}
+		
+		public Double getAltura () {
+			return altura;
+		}
+		
+		public void setAltura (Double altura) {
+			this.altura = altura;
+		
+		}
+		public Double areaRetangulo () {
+			return largura * altura;
+		}
+		public Double perimetroRetangulo () {
+			return largura *2 + altura *2;
+		}
+		public Double diagonalRetangulo () {
+			return Math.sqrt(largura * largura + altura * altura);
+		}
+		
+
+	}
+
+}
