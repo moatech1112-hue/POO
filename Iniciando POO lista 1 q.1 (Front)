@@ -1,0 +1,44 @@
+package Aulas_Unidade1;
+
+import java.util.Scanner;
+
+import Aulas_Unidade1.Back_l2_q1.Produto;
+
+public class Front_l2_q1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner ( System.in);
+      Produto produto = new Produto();
+      
+      System.out.println("informe os dados do produto");
+      System.out.print("Nome: ");
+      produto.setNome(sc.nextLine());
+      
+      System.out.print("Preco: ");
+      produto.setPreco(sc.nextDouble());
+      
+      System.out.print("Quantidade: ");
+      produto.setQuantidade(sc.nextInt());
+      
+      System.out.println("Dados do produto: " + produto);
+      
+      System.out.print("informe o numero de objetos a serem adicionados no estoque: ");
+      int quantidade = sc.nextInt();
+      produto.addProduto(quantidade);
+      
+      System.out.println("Dados atualizados: " + produto);
+      
+      System.out.println("informe o numero de itens que deseja remover do estoque: ");
+      quantidade=sc.nextInt();
+      produto.removeProduto(quantidade);
+      
+      
+      System.out.print("Dados atualizados: " + produto);
+      
+      sc.close();
+      
+      
+      
+	}
+
+}
