@@ -1,0 +1,58 @@
+package Aulas_Unidade1;
+
+public class Back_l2_q1 {
+	public static class Produto {
+		private String nome;
+		private Double preco;
+		private Integer quantidade;
+		// se não colocar get/set ele reclama
+
+		public String getNome() {
+			return nome;
+		}
+
+		public void setNome(String nome) {
+			this.nome = nome;
+		}
+
+		public Double getPreco() {
+			return preco;
+		}
+
+		public void setPreco(Double preco) {
+			this.preco = preco;
+		}
+
+		public Integer getQuantidade() {
+			return quantidade;
+		}
+
+		public void setQuantidade(Integer quantidade) {
+			this.quantidade = quantidade;
+		}
+
+		public Double valorTotal() {
+			return preco * quantidade;
+
+		}
+
+		public int addProduto(int quantidade) {
+			return this.quantidade += quantidade;
+            //this localiza o estoque atual
+		}
+		public int removeProduto ( int quantidade) {
+			return this.quantidade-=quantidade;
+			
+		}
+
+		@Override
+		public String toString() {
+			return "Produto [nome=" + nome + ", preco= R$" + valorTotal() + ", quantidade=" + quantidade + "]";
+		}
+		
+		
+		
+
+	}
+
+}
